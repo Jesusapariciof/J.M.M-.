@@ -1,0 +1,338 @@
+:root{
+    --color1:rgb(219,144,.5);
+    --color2: rgba(23,180,83, 0.877);
+    --color3: rgba(11,194,211,0.623);
+    --fondo: #f2f2f2;
+    --titulo: 33px;
+    --margenes:60px;
+    --espacios:10px;
+    --espacios-contenido: 45px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: var(--fondo);
+}
+img{
+    vertical-align: top;
+}
+/* pre-loader */
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #cef;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #cef transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.navbar.navbar-expand-lg.navbar-light.bg-light{
+    position: fixed;
+    width: 100%;
+}
+
+  /* Header */
+
+header{
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to bottom,
+    rgba(211,135,20, .6),
+    rgba(29,241,171,.6),
+    rgba(7,109,150, .45)
+    ), url(img/slide3.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+.textos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+
+}
+.textos>h1{
+    font-size: 80px;
+}
+.textos>h2{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+/* Main */
+
+.contenedor{
+    margin: auto;
+    padding: var(--margenes) 0;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.contenedor h3{
+    font-size: var(--titulo);
+    color: var(--color1);
+    margin-bottom:  var(--espacios);
+}
+
+.contenedor p{
+    font-size: var(--subtitulos);
+    font-weight: 300;
+    color: var(--color1);
+}
+
+.after::after{
+    content: '';
+    display: block;
+    margin: auto;
+    margin-top: var(--espacios);
+    width: 100px;
+     height: 2px;
+    background: var(--color1);
+    margin-bottom: var(--espacios-contenido); 
+}
+
+.carta{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.content-card{
+    width: 31%;
+    box-shadow: 0 0 6px rgba(0,0,0.5);
+    overflow: hidden;
+    height: 400px;
+}
+.people{
+    height: 80%;
+
+}
+
+.content-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texto-team{
+    height: 20%;
+    width: 100%;
+    padding: var(--espacios) 0;
+}
+
+.about{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: auto;
+}
+
+.servicios{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.caja-servicios>h4{
+    margin-bottom: var(--espacios);
+}
+
+.caja-servicios>p{
+    text-align: center;
+}
+.servicios img{
+    width: 80px;
+    height: 80px;
+}
+
+.botones-work{
+    overflow: hidden;
+}
+.botones-work li{
+    display: inline-block;
+    text-align: center;
+    margin-left: var(--espacios);
+    margin-bottom: var (var(--espacios-contenido));
+    padding: 6px 12px;
+    border: 1px solid var(--color1);
+    list-style: none;
+    color: var(--color1);
+}
+.botones-work li:hover{
+    background: var(--color1);
+    color: #fff;
+    cursor: pointer;
+}
+
+.botones-work .active{
+    background: var(--color1);
+    color: #fff;
+}
+
+.galeria-work{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.galeria-work .cont-work{
+    width: 31%;
+    box-shadow: 0 0 6px rgba(0,0,0.5);
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: var(--espacios-contenido);
+}
+.img-work{
+    height: 90%;
+    width: 100%;
+}
+.img-work img{
+    height: 100%;
+    width:100% ;
+    /* object-fit: cover; */
+}
+
+.textos-work{
+    height: 10%;
+}
+
+.textos-work h4{
+    line-height: 30px;
+    font-weight: 300;
+}
+
+/* Footer*/
+footer{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.marca-logo{
+    width: 40%;
+    margin: auto;
+    margin-bottom: var(--espacios);
+}
+.marca-logo img{
+    width: 100%;
+}
+
+.iconos{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+.fab{
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: var(--espacios);
+    display: inline-block;
+}
+
+footer p{
+    margin-top: var(--espacios);
+}
+
+/* Preloader*/
+.hidden{
+    overflow: hidden;
+}
+.centrado{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:700px){
+    .textos>h1{
+        font-size: 70px;
+    }
+    .textos>h2{
+        font-size: 35px;
+    }
+    .content-card{
+        width: 48%;
+        margin-bottom: var(--margenes);
+    }
+    /* .caja-servicios>h4{
+        font-size: 15px;
+    } */
+    .servicios{
+        display: flex;
+        justify-content: space-around;
+    }
+    :root{
+        --margenes:30px
+    }
+}
+
+@media screen and (max-width:500px){
+    :root{
+        --espacios-contenido:25px
+    }
+    .content-card{
+        width: 90%;
+    }
+    .caja-servicios{
+        width: 90%;
+        margin-bottom: var(--margenes);
+    }
+    .cont-work.programacion{
+        width: 85%;
+    }
+    .cont-work.diseño{
+        width: 85%;
+    }
+    .cont-work.marketing{
+        width: 85%;
+    }
+}
