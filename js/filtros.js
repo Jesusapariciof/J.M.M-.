@@ -15,11 +15,13 @@ $(function(){
     let equipo = $('#equipo').offset().top,
     servicio = $('#servicio').offset().top,
     trabajo = $('#trabajo').offset().top;
+    contacto = $('#contacto').offset().top
 
     window.addEventListener('resize', function(){
         let equipo = $('#equipo').offset().top,
     servicio = $('#servicio').offset().top,
     trabajo = $('#trabajo').offset().top;
+    contacto = $('#contacto').offset().top    
     })
 
     $('#enlace-inicio').on('click', function(e){
@@ -44,6 +46,12 @@ $(function(){
         e.preventDefault();
         $('html,body').animate({
             scrollTop:trabajo -125
+        }, 600)
+    })
+    $('#enlace-contacto').on('click', function(e){
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop:contacto -50
         }, 600)
     })
 });
